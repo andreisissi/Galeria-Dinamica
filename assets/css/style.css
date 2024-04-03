@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*    font-family: "Bebas Neue", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*   font-family: "Poppins", sans-serif; */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: rgba(128, 128, 128, 0.305);
+}
+
+nav {
+   display: flex;
+   width: 50%;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+}
+
+.icon {
+   font-size: 40px;
+   margin: auto;
+}
+
+.img-site {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   z-index: -1;
+}
+
+.img-site img {
+   position: relative;
+   width: 100%;
+}
+
+.container-form {
+   margin-top: 40%;
+   height: 300px;
+   text-align: center;
+   border: 2px solid gray;
+   border-radius: 5px;
+   padding-top: 40px;
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.container-form h1 {
+   font-family: "Abel", sans-serif;
+   text-align: center;
+   font-size: 1.5em;
+   text-transform: uppercase;
+}
+
+.add-img {
+   text-align: center;
+   margin-top: 4rem;
+   font-size: 20px;
+   font-family: "Poppins", sans-serif;
+}
+
+.add-img input {
+   font-size: 20px;
+   margin-left: 20px;
+   margin-bottom: 50px;
+   color: rgb(128, 128, 128);
+} 
+
+.section-file {
+   margin-bottom: 100px;
+}
+
+.formulario button {
+   border-radius: 5px;
+   border: 1px solid gray;
+   font-family: "Poppins", sans-serif;
+   font-size: 20px;
+   padding: 2px;
+   line-height: 5px;
+   width: 150px;
+   height: 30px;
+}
+
+.formulario button:hover {
+   background-color: #88C5B8;
+   border: 2px solid #72a49a;
+   color: white;
+}
+
+main {
+   margin-bottom: 100px;
+}
+
+.tittle-galeria {
+   font-family: "Abel", sans-serif;
+   text-align: center;
+   font-size: 1.5em;
+   text-transform: uppercase;
+   margin-bottom: 50px;
+}
+
+.container-galeria {
+   display: flex;
+   gap: 10px;
+   justify-content: center;
+   margin: auto;
+   flex-wrap: wrap;
+   padding: 5px;
+}
+
+.new-foto {
+   text-align: center;
+   width: 37.5rem;
+   padding: 5px;
+}
+
+.new-foto img {
+   width: 100%;
+}
+
+.delete-btn {
+   width: 9rem;
+   height: 30px;
+   font-size: 20px;
+   font-family: "Poppins", sans-serif;
+   line-height: 5px;
+   border-radius: 2px;
+   border: 1px solid gray;
+}
+
+.delete-btn:hover {
+   background-color: #88C5B8;
+   border: 2px solid #72a49a;
+   color: white;
+}
