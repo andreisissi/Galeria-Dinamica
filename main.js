@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
    galeria.innerHTML = localStorage.getItem('imagem') || '';
 });
 
-function adicionaFoto() {
+async function adicionaFoto() {
    const inputFoto = document.querySelector('#input-foto');
    const idUnico = geraId();
 
@@ -17,8 +17,8 @@ function adicionaFoto() {
 
    if (inputFoto.files && inputFoto.files[0]) {
       const reader = new FileReader();
-      reader.onload = function(event) {
-         const compressedDataUrl = compressImage(event.target.result, 0.7); // Compressão com qualidade de 70%
+      reader.onload = async function(event) {
+         const compressedDataUrl = await compressImage(event.target.result, 0.7); // Compressão com qualidade de 70%
          img.src = compressedDataUrl;         
          containerFoto.appendChild(img);
          containerFoto.appendChild(deleteBtn);
@@ -61,7 +61,7 @@ function compressImage(dataUrl, quality) {
       img.onload = function() {
          const canvas = document.createElement('canvas');
          const ctx = canvas.getContext('2d');
-         const maxWidth = 800; // Largura máxima da imagem comprimida
+         const maxWidth = 600; // Largura máxima da imagem comprimida
 
          let width = img.width;
          let height = img.height;
@@ -106,22 +106,6 @@ document.addEventListener('click', (e) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const btnAddFoto = document.querySelector('.btn-add-foto');
 // const galeria = document.querySelector('.container-galeria');
 
@@ -139,7 +123,7 @@ document.addEventListener('click', (e) => {
 
 //    const img = document.createElement('img');
 
-//    if(inputFoto.files[0].size >= 1048576) { // 1mb
+//    if(inputFoto.files[0].size >= 1048576) { // 1048576 = 1mb
 //       alert('Tamanho de imagem excedido');
 //       return;
 //    };
