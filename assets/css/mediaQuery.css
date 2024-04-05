@@ -1,11 +1,213 @@
 @media screen and (min-width: 480px) and (max-width: 768px) { /* TELA PEQUENA */
+
+   .icon {
+      font-size: 1.5rem;
+   }
+
+   .section-file {
+      margin-bottom: 2.5rem;
+   }
+
+   .container-form {
+      height: 15rem;
+      padding-top: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+   }
+
+   .container-form h1 {
+      font-size: 1.5rem;
+   }
+
+   .add-img {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+   }
+
+   .add-img input {
+      font-size: 1rem;
+   } 
+
+   main {
+      margin-bottom: 2rem;
+   }
+
+   .tittle-galeria {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+   }
+
+   .new-foto {
+      width: 25rem;
+      padding: 5px;
+   }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
+
+   .icon {
+      font-size: 2rem;
+   }
+
+   .section-file {
+      margin-bottom: 2.5rem;
+   }
+
+   .container-form {
+      height: 15rem;
+      padding-top: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+   }
+
+   .container-form h1 {
+      font-size: 1.5rem;
+   }
+
+   .add-img {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+   }
+
+   .add-img input {
+      font-size: 1rem;
+   } 
+
+   main {
+      margin-bottom: 2rem;
+   }
+
+   .tittle-galeria {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+   }
+
+   .new-foto {
+      width: 25rem;
+      padding: 5px;
+   }
+
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {  /* DESKTOP */
+
+   .icon {
+      font-size: 2rem;
+   }
+
+   .section-file {
+      margin-bottom: 2rem;
+   }
+
+   .container-form {
+      height: 20rem;
+      padding-top: 2.5rem;
+      padding-left: 10rem;
+      padding-right: 10rem;
+   }
+
+   .container-form h1 {
+      font-size: 2rem;
+   }
+
+   .add-img {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+   }
+
+   .add-img input {
+      font-size: 1.5rem;
+      margin-bottom: 4rem;
+   } 
+
+   .formulario button {
+      font-size: 1.5rem;
+      line-height: 5px;
+      width: 9rem;
+      height: 2rem;
+   }
+
+   main {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+   }
+
+   .tittle-galeria {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+   }
+
+   .new-foto {
+      width: 30rem;
+      padding: 5px;
+   }
+
+   .delete-btn {
+      width: 8rem;
+      height: 2rem;
+      font-size: 1.2rem;
+   }
+
 }
 
 @media screen and (min-width: 1200px) {  /* GRANDES TELAS */
+
+   .icon {
+      font-size: 2.5rem;
+   }
+
+   .section-file {
+      margin-bottom: 2rem;
+   }
+
+   .container-form {
+      height: 20rem;
+      padding-top: 3rem;
+      padding-left: 15rem;
+      padding-right: 15rem;
+   }
+
+   .container-form h1 {
+      font-size: 2rem;
+   }
+
+   .add-img {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+   }
+
+   .add-img input {
+      font-size: 1.5rem;
+      margin-bottom: 4rem;
+   } 
+
+   .formulario button {
+      font-size: 1.5rem;
+      line-height: 5px;
+      width: 9rem;
+      height: 2rem;
+   }
+
+   main {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+   }
+
+   .tittle-galeria {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+   }
+
+   .new-foto {
+      width: 37.5rem;
+      padding: 5px;
+   }
+
+   .delete-btn {
+      width: 8rem;
+      height: 2rem;
+      font-size: 1.2rem;
+   }
+
 }

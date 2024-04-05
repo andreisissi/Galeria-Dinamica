@@ -104,6 +104,18 @@ document.addEventListener('click', (e) => {
    }
 });
 
+// document.querySelectorAll('.delete-btn').forEach(button => {
+//    button.addEventListener('mouseover', () => {
+//       const parent = button.parentNode;
+//       parent.style.border = '2px solid red';
+//    });
+
+//    button.addEventListener('mouseout', () => {
+//       const parent = button.parentNode;
+//       parent.style.border = 'none';
+//    });
+// })
+
 
 
 // const btnAddFoto = document.querySelector('.btn-add-foto');

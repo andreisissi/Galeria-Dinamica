@@ -40,6 +40,10 @@ nav {
    width: 100%;
 }
 
+.section-file {
+   margin-bottom: 2rem;
+}
+
 .container-form {
    margin-top: 40%;
    height: 14rem;
@@ -72,10 +76,6 @@ nav {
    color: rgb(128, 128, 128);
 } 
 
-.section-file {
-   margin-bottom: 2rem;
-}
-
 .formulario button {
    border-radius: 5px;
    border: 1px solid gray;
@@ -83,8 +83,8 @@ nav {
    font-size: 1rem;
    padding: 2px;
    line-height: 5px;
-   width: 150px;
-   height: 30px;
+   width: 9rem;
+   height: 2rem;
 }
 
 .formulario button:hover {
@@ -107,7 +107,7 @@ main {
 
 .container-galeria {
    display: flex;
-   gap: 10px;
+   gap: 20px;
    justify-content: center;
    margin: auto;
    flex-wrap: wrap;
@@ -122,6 +122,7 @@ main {
 
 .new-foto img {
    width: 100%;
+   border-radius: 5px;
 }
 
 .delete-btn {
