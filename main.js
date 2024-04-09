@@ -13,14 +13,15 @@ async function adicionaFoto() {
    containerFoto.classList.add('new-foto');
    containerFoto.setAttribute('data-id', idUnico);
 
-   const img = document.createElement('img');
+   const objFileList = inputFoto.files; //tamanho antes de comprimir
 
-   if (inputFoto.files && inputFoto.files[0]) {
+   if (objFileList && objFileList[0]) {
       const reader = new FileReader();
       reader.onload = async function(event) {
-         const compressedDataUrl = await compressImage(event.target.result, 0.7);
-         img.src = compressedDataUrl;         
-         containerFoto.appendChild(img);
+         const dataUrl = event.target.result;
+         const quality = 0.8;
+         const compressedDataUrl = await compressImage(dataUrl, quality);        
+         containerFoto.setAttribute('style', `background-image: url("${compressedDataUrl}");`);
          containerFoto.appendChild(deleteBtn);
          galeria.appendChild(containerFoto);
          salvarImagem();
@@ -57,7 +58,7 @@ function geraId() {
 
 function compressImage(dataUrl, quality) {
    return new Promise((resolve) => {
-      const img = new Image();
+      const img = new Image(); // objeto
       img.onload = function() {
          const canvas = document.createElement('canvas');
          const ctx = canvas.getContext('2d');
@@ -80,6 +81,8 @@ function compressImage(dataUrl, quality) {
             const compressedReader = new FileReader();
             compressedReader.onload = function() {
                resolve(compressedReader.result);
+               // console.log(compressedReader.result); // Resultado
+               // console.log(blob.size); // Tamanho
             };
             compressedReader.readAsDataURL(blob);
          }, 'image/jpeg', quality);
@@ -94,7 +97,7 @@ btnAddFoto.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
-   var alvo = e.target;
+   let alvo = e.target;
 
    if (alvo.classList.contains('delete-btn')) {
       if (confirm('Tem certeza que deseja excluir essa imagem?')) {
@@ -103,3 +106,21 @@ document.addEventListener('click', (e) => {
       }
    }
 });
+
+document.addEventListener('mouseover', (e) => {
+   let alvo = e.target;
+
+   if (alvo.classList.contains('delete-btn')) {
+      const parent = alvo.parentElement;
+      parent.style.opacity = 0.7;
+   }
+})
+
+document.addEventListener('mouseout', (e) => {
+   let alvo = e.target;
+
+   if (alvo.classList.contains('delete-btn')) {
+      const parent = alvo.parentElement;
+      parent.style.opacity = '';
+   }
+})
